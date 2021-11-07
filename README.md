@@ -5,6 +5,10 @@ The project has been done by Olivier Nicolini, Matteo Tadiello and Simone Zambon
 In this repository the report for the course project can be found with the name "**Reproducibility_Report.pdf**".  
 We concluded that the author's intuition of using a generator in an adversarial fashion has proven to work and we were able to reproduce their method, but we achieved a lower accuracy than what claimed in the paper.
 
+<p align="center">
+  <img src="https://github.com/SZamboni/advanceddeep/blob/master/Our_code/Pytorch/Basic_experiments/table_CIFAR10_ours.png">
+</p>
+
 ## Author's code
 The first folder is the "Authors' code". There are two more subfolders. 
 In the first one, Few_shot_learning , there is the few-shot code (taken from https://github.com/polo5/FewShotKnowledgeTransfer) for the Knowledge Distillation + Attention used in the paper as a baseline against the zero-shot method. In this folder, we only downloaded the pretrained models and created a file called our main, that we used with command line options to run the six experiments with CIFAR10.
@@ -18,10 +22,6 @@ Then there is the Pytorch folder. This is the folder where our working reimpleme
  - wideresnet.py: a modification of https://github.com/indussky8/wide-resnet.pytorch/blob/master/networks/wide_resnet.py to have a WideResNetwork that returns the intermediate activations and the final prediction as outputs.
  - zero-shot-baseline.py: the complete code to run a zero-shot algorithm from a pretrained model. All the experiments use a variation of this file. *This is the file to be modified to run custom experiments*.
 The following table shows the obtained results:
-
-<p align="center">
-  <img src="https://github.com/SZamboni/advanceddeep/blob/master/Our_code/Pytorch/Basic_experiments/table_CIFAR10_ours.png">
-</p>
 
 These four files are all you need to run a zero-shot algorithm. Modifying zero-shot-baseline.py we created our experiments and we divide the in folders.
 
