@@ -6,7 +6,7 @@ In this repository the report for the course project can be found with the name 
 We concluded that the author's intuition of using a generator in an adversarial fashion has proven to work and we were able to reproduce their method, but we achieved a lower accuracy than what claimed in the paper.
 
 <p align="center">
-  <img src="https://github.com/SZamboni/advanceddeep/blob/master/Our_code/Pytorch/Basic_experiments/table_CIFAR10_ours.png">
+  <img src="https://github.com/SZamboni/advanceddeep/blob/master/Our_code/Pytorch/Basic_experiments/table_CIFAR10_better.png">
 </p>
 
 ## Author's code
