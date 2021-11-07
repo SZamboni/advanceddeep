@@ -1,15 +1,16 @@
-# Introduction
+# Reproducibility project
 Project done for the Advanced Deep Learning course held by Hossein Azizpour during Period 1 (September and October) 2019 at KTH.
-The task was to reproduce and reimplement the paper "Zero-shot Knowledge Transfer via Adversarial Belief Matching" (https://arxiv.org/pdf/1905.09768.pdf) presented at NIPS 2019. 
-The project has been done by Olivier Nicolini, Matteo Tadiello and Simone Zamboni.
-In this repository the report for the course project can be found.
+The task was to reproduce and reimplement the paper "**Zero-shot Knowledge Transfer via Adversarial Belief Matching**" (https://arxiv.org/pdf/1905.09768.pdf) presented at NIPS 2019. 
+The project has been done by Olivier Nicolini, Matteo Tadiello and Simone Zamboni.  
+In this repository the report for the course project can be found with the name "**Reproducibility_Report.pdf**".  
+We concluded that the author's intuition of using a generator in an adversarial fashion has proven to work and we were able to reproduce their method, but we achieved a lower accuracy than what claimed in the paper.
 
-# Author's code
+## Author's code
 The first folder is the "Authors' code". There are two more subfolders. 
 In the first one, Few_shot_learning , there is the few-shot code (taken from https://github.com/polo5/FewShotKnowledgeTransfer) for the Knowledge Distillation + Attention used in the paper as a baseline against the zero-shot method. In this folder, we only downloaded the pretrained models and created a file called our main, that we used with command line options to run the six experiments with CIFAR10.
 In the second folder, Zero_shot_learning, there is the code for the zero-shot learning method (taken from https://github.com/polo5/ZeroShotKnowledgeTransfer), where we downloaded the pretrained models. The code has been slightly modified in order to run it on our environment by fixing a compatibility issue with a library. This modification regards only the logger.py file. In this folder, we created seven new files, corresponding to the code for the six experiments on CIFAR10 and the one on SVHN.
 
-# Our code
+## Our code
 Inside the Keras folder,  our trials to implement the zero-shot algorithm on Keras can be found. We found very difficult to get the intermediate activations and train the generation with backpropagation through both the student and the teacher, so we decided to switch to Pytorch. We decided to keep the code even if does not work since we believe this was still a valuable learning experience.
 Then there is the Pytorch folder. This is the folder where our working reimplementation can be found. Inside this folder there are 4 files:
  - cifar10utils.py: utils to download and get the dataloader for CIFAR-10
